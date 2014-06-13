@@ -1,8 +1,29 @@
 class Formatter
   def int(value)
-    cheat(value)
+    real(value)
   end
 
+  def real(value)
+    first = value / 2**3
+    value = value % 2**3
+    second = value / 2**2
+    value = value % 2**2
+    third = value / 2
+    value = value % 2
+    fourth = value / 2**0
+
+   result = first.to_s+second.to_s+third.to_s+fourth.to_s
+
+    puts first
+    puts second
+    puts third
+    puts fourth
+
+    result
+
+
+
+  end
   def cheat(value)
     case value
       when 0
@@ -44,3 +65,4 @@ class Formatter
 
 
 end
+
