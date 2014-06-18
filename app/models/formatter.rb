@@ -1,6 +1,6 @@
 class Formatter
   def int(value)
-    real(value)
+    realreal(value)
   end
 
   def real(value)
@@ -12,7 +12,7 @@ class Formatter
     value = value % 2
     fourth = value / 2**0
 
-   result = first.to_s+second.to_s+third.to_s+fourth.to_s
+    result = first.to_s+second.to_s+third.to_s+fourth.to_s
 
     puts first
     puts second
@@ -21,6 +21,26 @@ class Formatter
 
     result
 
+  end
+
+  def realreal(value)
+    puts "Calculating value for #{value}"
+    result = ''
+    while value > 0
+      bit = value % 2
+      value = value / 2
+      puts value
+      result = bit.to_s+ result
+      puts result
+    end
+    puts result
+    result.rjust(4,'0')
+  end
+
+  def yolo (value)
+    value.to_s(2)
+    result = value
+    puts result
 
 
   end
